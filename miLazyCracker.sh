@@ -130,7 +130,7 @@ rm -f "$TMPFILE_UNK" "0x${myUID}_"*".txt"
 if [ $mfocResult -eq 0 ]; then
     echo -e "\n\nDump left in: $TMPFILE_MFD"
     if ask "Do you want clone the card? Place card on reader now and press Y"; then
-         nfc-mfclassic W a $TMPFILE_MFD
+         nfc-mfclassic W a u $TMPFILE_MFD
     fi
 else
     rm -f "$TMPFILE_MFD"
